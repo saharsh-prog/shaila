@@ -38,7 +38,7 @@ _max_date = max(_max_date, date(2026, 8, 31))
 
 if (
     "shaila_date" not in st.session_state
-    or st.session_state.shaila_date == date(2026, 6, 28)
+    or st.session_state.shaila_date in [date(2025, 5, 30), date(2026, 6, 28), date(2026, 8, 28)]
 ):
     st.session_state.shaila_date = rk.DEFAULT_DATE
 
@@ -304,7 +304,7 @@ st.markdown(
           f"Five features feed the model: soil moisture at 0&ndash;7 cm and "
           f"7&ndash;28 cm, temperature, and the 3-day and 7-day Antecedent "
           f"Precipitation Index.</p>",
-        count="2018–2025",
+        count="2018–2026",
     ),
     unsafe_allow_html=True,
 )

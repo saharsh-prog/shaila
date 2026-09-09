@@ -1316,7 +1316,7 @@ def diverging_bars(rows: list[dict]) -> str:
 
     out.append(
         f'<p class="sh-note" style="margin:0.4rem 0 0 0">Bars show percent '
-        f"deviation from the 2018&ndash;2025 median for this weather point in "
+        f"deviation from the 2018&ndash;2026 median for this weather point in "
         f"this calendar month, clipped at &plusmn;{_DEV_CLIP_PCT:.0f}%. Absolute "
         f"values and differences are printed above each bar.</p>"
     )

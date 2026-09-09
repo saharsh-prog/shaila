@@ -48,14 +48,13 @@ RISK_BINS   = [0.0, 0.25, 0.50, 0.75, 1.01]
 RISK_LABELS = ["Low", "Medium", "High", "Severe"]
 RISK_COLORS = [theme.SEVERITY_COLORS[lbl] for lbl in RISK_LABELS]
 
-# Opens on the operational forecast date.
-DEFAULT_DATE = date(2026, 8, 28)
+# Opens on the deadliest documented event in the record (high risk default).
+DEFAULT_DATE = date(2026, 5, 30)
 
 # One-click jumps — each is a documented event or a reference condition.
 DEMO_DATES = [
-    ("28 Aug 2026 — Monsoon active spell", date(2026, 8, 28)),
+    ("30 May 2026 — Bonda flash flood (5 deaths)", date(2026, 5, 30)),
     ("26 Aug 2026 — Snapshot date", date(2026, 8, 26)),
-    ("30 May 2025 — Bonda flash flood (5 deaths)", date(2025, 5, 30)),
     ("17 Jun 2023 — Dhirenpara flash flood (1 death)", date(2023, 6, 17)),
     ("26 May 2020 — wettest hour on record", date(2020, 5, 26)),
     ("15 Jan 2020 — dry season (contrast)", date(2020, 1, 15)),

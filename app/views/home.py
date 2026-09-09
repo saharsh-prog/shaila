@@ -48,8 +48,8 @@ _section("Current Risk Snapshot", "Real cached model output for the default demo
 snapshot_left, snapshot_right = st.columns([1.15, 1], gap="large")
 
 with snapshot_left:
-    data_date = date(2025, 5, 30)
-    display_date_str = "26 Aug 2026"
+    data_date = rk.DEFAULT_DATE
+    display_date_str = data_date.strftime("%d %b %Y")
     gdf = rk.build_display_gdf(data_date)
     has_risk = gdf["risk_probability"].notna()
     peak_risk = float(gdf.loc[has_risk, "risk_pct"].max()) if has_risk.any() else None

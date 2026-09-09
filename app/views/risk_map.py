@@ -30,14 +30,14 @@ from app.theme import C
 _min_date, _max_date = rk.available_date_range()
 _max_date = max(_max_date, date(2026, 8, 31))
 
-TARGET_DEFAULT_DATE = date(2026, 8, 28)
+TARGET_DEFAULT_DATE = rk.DEFAULT_DATE
 if (
     "shaila_risk_map_date" not in st.session_state
-    or st.session_state.shaila_risk_map_date == date(2026, 6, 28)
+    or st.session_state.shaila_risk_map_date in [date(2025, 5, 30), date(2026, 6, 28), date(2026, 8, 28)]
 ):
     st.session_state.shaila_risk_map_date = TARGET_DEFAULT_DATE
 
-if st.session_state.get("onpage_risk_date") == date(2026, 6, 28):
+if st.session_state.get("onpage_risk_date") in [date(2025, 5, 30), date(2026, 6, 28), date(2026, 8, 28)]:
     st.session_state["onpage_risk_date"] = TARGET_DEFAULT_DATE
 
 current_forecast_date = st.session_state.get("onpage_risk_date", st.session_state.shaila_risk_map_date)
@@ -58,14 +58,14 @@ with st.sidebar:
         "Warning threshold",
         min_value=0.0,
         max_value=1.0,
-        value=0.75,
+        value=0.50,
         step=0.05,
         help="Cells at or above this risk are outlined and listed in the alert log.",
     )
 
     show_incidents = st.toggle(
         "Show verified incidents",
-        value=False,
+        value=True,
         help="Overlay the 8 documented historical flash flood incidents "
              "as blue rings. These are ground truth, not model output.",
     )
