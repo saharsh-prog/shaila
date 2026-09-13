@@ -365,8 +365,7 @@ number in it survives being checked.
    stronger story.
 3. **The 3 ASDMA rows flagged "coordinate VERIFY"** are still unverified. They
    feed the hazard floor, so they affect real map output.
-4. **Repo rename** `Srv99x/PRAVAH` → SHAILA. Breaks existing clones and any link
-   already in the slide deck. Human call; not done.
+
 
 ---
 
