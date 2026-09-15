@@ -1,0 +1,18 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Large geospatial rasters (re-downloaded by the pipeline)
+*.tif
+*.nc
+
+# Regeneratable artifacts, rebuilt by the pipeline scripts
+models/
+data/processed/
+
+# Raw source data IS committed (small, source of truth):
+#   data/raw/asdma_vulnerable_locations.csv
+#   data/raw/verified_incidents.csv
