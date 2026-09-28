@@ -13,7 +13,7 @@
 
 - **Dual-Factor Risk Formulation**: Combines static geophysical susceptibility with dynamic hydrometeorological trigger modeling:
   $$\text{Composite Risk} = \text{Trigger Probability} \times \text{Susceptibility Multiplier}$$
-- **1 km² Spatial Discretization**: uniform grid cells covering the entire district with digital elevation, slope analysis, and ASDMA vulnerable point intersections.
+- **1 km² Spatial Discretization**: uniform grid cells covering the entire district with digital elevation, slope analysis, and vulnerable point intersections.
 - **Machine Learning Dynamic Trigger Model**: Trained `RandomForestClassifier` utilizing leak-safe antecedent precipitation indices (API 3-day and 7-day), root-zone and surface soil moisture levels, and temperature.
 - **Interactive Multi-Page GIS Dashboard**: Built on Streamlit and Folium choropleths with layer controls, date pickers, district statistics, and per-cell risk explainers.
 - **Simulated IoT Sensor Telemetry Feed**: Real-time MQTT stream ingestion demo displaying node-level water levels and soil saturation for critical drainage junctions.
@@ -30,7 +30,7 @@
                                               │
 ┌────────────────────────┐                    ▼
 │  DEM & Topography /    │       ┌────────────────────────┐
-│ ASDMA Hazard Locations │       │  RandomForest Classifier│
+│ DMA Hazard Locations │       │  RandomForest Classifier│
 └───────────┬────────────┘       │ (Hydrometeorological)  │
             │                    └───────────┬────────────┘
             ▼                                │
