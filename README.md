@@ -4,8 +4,11 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.62.0-red.svg)](https://streamlit.io/)
 [![GeoPandas](https://img.shields.io/badge/GeoPandas-1.1.4-green.svg)](https://geopandas.org/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-shaila.onrender.com-46E3B7.svg)](https://shaila.onrender.com)
 
 **SHAILA (शैल)** is a high-resolution, spatial-hydrological risk assessment and early warning dashboard. It monitors flash-flood and rainfall-triggered landslide hazards across a **1 km² resolution grid**.
+
+**Live Demo:** https://shaila.onrender.com
 
 ---
 
